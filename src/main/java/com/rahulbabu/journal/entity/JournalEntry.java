@@ -7,7 +7,16 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import lombok.Data;
+// import lombok.Getter;
+// import lombok.Setter;
+
 @Document
+//created getters and setters using lombok
+// @Getter 
+// @Setter
+
+@Data
 public class JournalEntry {
 
     @Id
@@ -20,39 +29,39 @@ public class JournalEntry {
     // private Date date; //this has date with time
     private LocalDate date;
 
-    //Getters and setters
+    //Getters and setters  we are creating it without Lombok
 
-    public void setId(ObjectId id){
-        this.id = id;
-    }
+    // public void setId(ObjectId id){
+    //     this.id = id;
+    // }
 
-    public ObjectId getId(){
-        return this.id;
-    }
+    // public ObjectId getId(){
+    //     return this.id;
+    // }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    // public void setTitle(String title) {
+    //     this.title = title;
+    // }
 
-    public String getTitle(){
-        return this.title;
-    }
-
-
-    public void setContent(String content){
-        this.content = content;
-    }
-
-    public String getContent(){
-        return this.content;
-    }
+    // public String getTitle(){
+    //     return this.title;
+    // }
 
 
-    public void setDate(LocalDate date){
-        this.date = date;
-    }
+    // public void setContent(String content){
+    //     this.content = content;
+    // }
 
-    public LocalDate getDate(){
-        return this.date;
-    }
+    // public String getContent(){
+    //     return this.content;
+    // }
+
+
+    // public void setDate(LocalDate date){
+    //     this.date = date;
+    // }
+
+    // public LocalDate getDate(){
+    //     return this.date;
+    // }
 }
